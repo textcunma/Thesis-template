@@ -1,4 +1,4 @@
-\documentclass[11pt,a4j]{jreport}
+\documentclass[a4paper,dvipdfmx]{jreport}
 
 \usepackage{comment}
 \usepackage{float}
@@ -20,9 +20,11 @@
 \usepackage{textcomp}
 \usepackage{xcolor}
 \usepackage[ipaex]{pxchfon}
+\usepackage{pdfpages}
 \usepackage[top=30truemm,bottom=30truemm,left=25truemm,right=25truemm]{geometry}
 
-\setlength{\headheight}{15pt}
+\setlength{\headheight}{16.0pt}
+\setlength{\footskip}{16.0pt}
 \begin{document}
 
 %表紙
@@ -34,6 +36,12 @@
 \tableofcontents
 \pagestyle{fancy}
 \lhead{\rightmark}
+
+%図目次
+\listoffigures
+%表目次
+\listoftables
+
 \renewcommand{\chaptermark}[1]{\markboth{第\ \normalfont\thechapter\ 章~~#1}{}}
 
 %イントロダクション
@@ -52,4 +60,15 @@
 \include{acknowledgments.tex}
 %参考文献
 \include{references.tex}
+
+%図の挿入
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=14cm,clip]{./images/***}   %png file
+    \caption{test image}
+    \label{image}
+\end{figure}
+
+%pdf挿入
+\includepdf[pages=-,  noautoscale=true, scale=0.9, pagecommand={}]{****.pdf}
 \end{document}

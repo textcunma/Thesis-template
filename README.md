@@ -10,3 +10,5 @@
 ※READMEファイルは不要なので削除して結構
 3. コンパイラを「Latex」に設定(詳しくは[LaTexの卒論・修論テンプレ(日本語・Overleaf)](https://qiita.com/non-caffeine/items/1a7a3ad2c8f840d8748f)に書かれています)
 
+### 更新
+2022/2/8：pdf対応、図目次、表目次追加
